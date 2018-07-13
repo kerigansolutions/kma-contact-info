@@ -1,11 +1,11 @@
 <?php
-namespace KeriganSolutions\ContactInfo;
+namespace KeriganSolutions\KMAContactInfo;
 
 class ContactInfo
 {
     public function addField(array $field)
     {
-        acf_add_options_page($field);
+        acf_add_local_field($field);
 
         return $this;
     }
