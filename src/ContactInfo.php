@@ -11,12 +11,22 @@ class ContactInfo
 
         return $this;
     }
+
     public function use()
     {
-        if ( !function_exists( 'acf_add_local_field_group' ) ) {
-            return;
+        if ( function_exists( 'acf_add_local_field_group' ) ) {
+            add_action( 'init', [$this, 'addGenericFields'] );
+            add_action( 'init', [$this, 'addCustomFields'] );
         }
+    }
 
+    public function addCustomFields()
+    {
+        // For extending
+    }
+
+    public function addGenericFields()
+    {
         if (function_exists('acf_add_options_page')) {
             acf_add_options_page(array(
                 'page_title' => 'Contact Info',
