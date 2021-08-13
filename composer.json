@@ -14,5 +14,8 @@
         "psr-4": {
             "KeriganSolutions\\KMAContactInfo\\": "src"
         }
-    }
+    },
+    "metadata-url": "/p2/%package%.json",
+    "providers-api": "https://packagist.org/providers/%package%.json",
+    "available-packages": []
 }
